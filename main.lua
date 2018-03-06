@@ -1,7 +1,5 @@
------------------------------------------------------------------------------------------
---
--- main.lua
---
------------------------------------------------------------------------------------------
-
--- Your code here
+--Title: Animating Images
+--Name: Sasha Malko
+--Course: ICS2O/3C
+--Description: Thsi program displays 3 images moving in different
+-- directions, with some coloured text and a background
