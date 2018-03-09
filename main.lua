@@ -74,12 +74,6 @@ local function MoveShip(event)
 	
 end
 
-if 
-	helicopter.x = 100  then 
-	helicopter:scale(1,1)
-	helicopter.x = helicopter.x + scrollSpeed
-end
-
 --MoveShip will be called over and over again
 Runtime:addEventListener("enterFrame", MoveShip)
 
