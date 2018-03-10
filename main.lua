@@ -22,7 +22,7 @@ local birdWidth = bird.width
 local birdHeight = bird.height
 
 --global variables
-scrollSpeed = 2
+scrollSpeed = 3
 goSpeed = -5
 runSpeed = 5
 
@@ -51,12 +51,13 @@ airplane.alpha = 0
 local function MoveShip(event)
 	--add the scroll speed to the x-value of the ship
 	airplane.x = airplane.x + scrollSpeed
-	--change the transparency of the ship every time it moves so that it fades out 
+    --change the transparency of the ship every time it moves so that it fades out 
 	airplane.alpha = airplane.alpha + 0.01
 	--make the ship shrink every time it moves
     airplane:scale (1 - 0.002, 1 - 0.002)
-end
-
+    
+end 
+    
 --MoveShip will be called over and over again
 Runtime:addEventListener("enterFrame", MoveShip)
 
@@ -92,8 +93,14 @@ local function MoveShip(event)
 	helicopter.alpha = helicopter.alpha - 0.0001
 	--make the ship grow ever time it moves
 	helicopter:scale (1 + 0.01,1 + 0.01)
-
 end
 
 --MoveShip will be called over and over again
 Runtime:addEventListener("enterFrame", MoveShip)
+
+if   airplane.x == 10 then 
+     airplane:scale(-1,1)
+	 airplane.x = airplane.x + goSpeed
+end
+
+
